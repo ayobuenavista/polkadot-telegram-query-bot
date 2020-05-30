@@ -1,0 +1,9 @@
+{
+  "axios": {
+    "api": {
+      "baseURL": "https://",
+      "timeout": 2000
+    }
+  },
+  "nodes": {}
+}
