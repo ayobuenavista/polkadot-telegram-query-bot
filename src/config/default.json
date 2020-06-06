@@ -1,9 +1,8 @@
 {
-  "axios": {
-    "api": {
-      "baseURL": "https://",
-      "timeout": 2000
-    }
-  },
-  "nodes": {}
+  "nodes": {
+    "polkadot": "wss://rpc.polkadot.io",
+    "kusama": "wss://kusama-rpc.polkadot.io",
+    "edgeware": "wss://mainnet1.edgewa.re",
+    "kulupu": "wss://rpc.kulupu.network/ws"
+  }
 }
