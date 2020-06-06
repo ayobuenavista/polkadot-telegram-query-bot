@@ -1,8 +1,8 @@
 const logger = require('../logger');
-const axios = require('./axios');
+const nodes = require('./nodes');
 
-module.exports = app => {
-  app.context.axios = axios;
+module.exports = async app => {
+  app.context.nodes = await nodes();
 
   logger.info('Initialized plugins');
 };

@@ -2,7 +2,7 @@ const Extra = require('telegraf/extra');
 const logger = require('../logger');
 const keywordProcs = require('./keywordProcs');
 
-module.exports = app => {
+module.exports = async app => {
   for (let index in keywordProcs) {
     app.hears(keywordProcs[index].pattern, ctx => {
       ctx.reply(keywordProcs[index].message, Extra.inReplyTo(ctx.message.message_id));

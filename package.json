@@ -16,6 +16,7 @@
     "start": "node src/"
   },
   "dependencies": {
+    "@polkadot/api": "^1.17.2",
     "axios": "^0.19.2",
     "bn.js": "^5.1.2",
     "dotenv": "^8.2.0",

@@ -1,5 +1,9 @@
 const logger = require('../logger');
+const chainCandidate = require('./chainCandidate');
 
-module.exports = app => {
+module.exports = async app => {
+  app.command('chaincandidate', chainCandidate());
+  app.command('chainCandidate', chainCandidate());
+
   logger.info('Initialized commands');
 };
