@@ -7,17 +7,17 @@ module.exports = async () => {
   const polkadotProvider = new WsProvider(config.nodes.polkadot);
   const kusamaProvider = new WsProvider(config.nodes.kusama);
   // const edgewareProvider = new WsProvider(config.nodes.edgeware);
-  const kulupuProvider = new WsProvider(config.nodes.kulupu);
+  // const kulupuProvider = new WsProvider(config.nodes.kulupu);
 
-  const polkadot = await ApiPromise.create({ polkadotProvider });
-  const kusama = await ApiPromise.create({ kusamaProvider });
-  // const edgeware = await ApiPromise.create({ edgewareProvider });
-  const kulupu = await ApiPromise.create({ kulupuProvider });
+  const polkadot = await ApiPromise.create({ provider: polkadotProvider });
+  const kusama = await ApiPromise.create({ provider: kusamaProvider });
+  // const edgeware = await ApiPromise.create({ provider: edgewareProvider });
+  // const kulupu = await ApiPromise.create({ provider: kulupuProvider });
     
   return {
     polkadot,
     kusama,
     // edgeware,
-    kulupu,
+    // kulupu,
   };
 };

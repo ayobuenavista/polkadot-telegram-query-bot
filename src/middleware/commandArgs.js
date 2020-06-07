@@ -1,7 +1,7 @@
 module.exports = () => {
   return (ctx, next) => {
     if (ctx.updateType === 'message' && ctx.updateSubTypes.includes('text')) {
-      let text = ctx.update.message.text.toLowerCase();
+      let text = ctx.update.message.text;
       let match;
 
       if (text.startsWith('/')) {
