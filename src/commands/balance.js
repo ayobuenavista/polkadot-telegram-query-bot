@@ -4,7 +4,7 @@ module.exports = () => {
   return async ctx => {
     const { helpers, message, reply, replyWithMarkdown, state } = ctx;
     const { inReplyTo } = Extra;
-    const { checkAddress, fromPlanck, getWeb3 } = helpers;
+    const { checkAddress, getWeb3 } = helpers;
     const { args } = state.command;
 
     if (args.length < 1) {
@@ -30,8 +30,8 @@ module.exports = () => {
 
     let msg = '';
     msg = msg.concat(
-      `Total: \`${fromPlanck(balance.free)}\`\n`,
-      `Bonded: \`${fromPlanck(balance.miscFrozen)}\``,
+      `Total: \`${balance.free.toHuman()}\`\n`,
+      `Bonded: \`${balance.miscFrozen.toHuman()}\``,
     );
 
     replyWithMarkdown(msg, inReplyTo(message.message_id));
