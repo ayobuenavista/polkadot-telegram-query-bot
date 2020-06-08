@@ -16,7 +16,7 @@
     "start": "node src/"
   },
   "dependencies": {
-    "@polkadot/api": "^1.17.2",
+    "@polkadot/api": "^1.18.1",
     "axios": "^0.19.2",
     "bn.js": "^5.1.2",
     "dotenv": "^8.2.0",
@@ -25,7 +25,7 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "eslint": "^7.1.0",
+    "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-friendly-formatter": "^4.0.1",
