@@ -14,8 +14,8 @@ module.exports = () => {
       return;
     }
 
-    const network = args[1] ? args[1].toLowerCase() : 'polkadot';
-    const web3 = getWeb3(network);
+    const chain = args[1] ? args[1].toLowerCase() : 'polkadot';
+    const web3 = getWeb3(chain);
     const hash = args[0];
 
     try {

@@ -7,10 +7,10 @@ module.exports = () => {
     const { getWeb3 } = helpers;
     const { args } = state.command;
 
-    const network = args[0] ? args[0].toLowerCase() : 'polkadot';
-    const web3 = getWeb3(network);
+    const chain = args[0] ? args[0].toLowerCase() : 'polkadot';
+    const web3 = getWeb3(chain);
 
-    const [chain, totalIssuance, session] = await Promise.all([
+    const [chainName, totalIssuance, session] = await Promise.all([
       web3.rpc.system.chain(),
       web3.query.balances.totalIssuance(),
       web3.derive.session.info()
@@ -19,7 +19,7 @@ module.exports = () => {
 
     let msg = '';
     msg = msg.concat(
-      `Chain: \`${chain}\`\n`,
+      `Chain: \`${chainName}\`\n`,
       `Total Issuance: \`${totalIssuance.toHuman()}\`\n`,
       `Active Era: \`${session.activeEra.toHuman()}\`\n`,
       `Start of Active Era: \`${

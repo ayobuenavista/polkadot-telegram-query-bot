@@ -7,8 +7,8 @@ module.exports = () => {
     const { getWeb3 } = helpers;
     const { args } = state.command;
 
-    const network = args[0] ? args[0].toLowerCase() : 'polkadot';
-    const web3 = getWeb3(network);
+    const chain = args[0] ? args[0].toLowerCase() : 'polkadot';
+    const web3 = getWeb3(chain);
     const lastHeader = await web3.rpc.chain.getHeader();
     const header = await web3.derive.chain.getHeader(lastHeader.hash);
 
