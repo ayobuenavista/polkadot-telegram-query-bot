@@ -1,5 +1,6 @@
 const logger = require('../logger');
 const balance = require('./balance');
+const blockInfo = require('./blockInfo');
 const chainInfo = require('./chainInfo');
 const councilInfo = require('./councilInfo');
 const democracyInfo = require('./democracyInfo');
@@ -10,6 +11,7 @@ const proposals = require('./proposals');
 const proposalInfo = require('./proposalInfo');
 const runtimeConstants = require('./runtimeConstants');
 const stakingInfo = require('./stakingInfo');
+const sudoKey = require('./sudoKey');
 const techComm = require('./techComm');
 const techCommProposals = require('./techCommProposals');
 const techCommProposalInfo = require('./techCommProposalInfo');
@@ -17,6 +19,8 @@ const validators = require('./validators');
 
 module.exports = async app => {
   app.command('balance', balance());
+  app.command('blockInfo', blockInfo());
+  app.command('blockInfo', blockInfo());
   app.command('chaininfo', chainInfo());
   app.command('chainInfo', chainInfo());
   app.command('councilinfo', councilInfo());
@@ -36,6 +40,8 @@ module.exports = async app => {
   app.command('runtimeConstants', runtimeConstants());
   app.command('stakinginfo', stakingInfo());
   app.command('stakingInfo', stakingInfo());
+  app.command('sudokey', sudoKey());
+  app.command('sudoKey', sudoKey());
   app.command('techcomm', techComm());
   app.command('techComm', techComm());
   app.command('techcommproposals', techCommProposals());
