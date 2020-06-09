@@ -12,14 +12,14 @@ module.exports = () => {
 
     let msg = '';
     msg = msg.concat(
-      `Enactment Period: \`${web3.consts.democracy.enactmentPeriod.toNumber()}\`\n`,
-      `Launch Period: \`${web3.consts.democracy.launchPeriod.toNumber()}\`\n`,
-      `Voting Period: \`${web3.consts.democracy.votingPeriod.toNumber()}\`\n`,
-      `Minimum Deposit: \`${web3.consts.democracy.minimumDeposit.toNumber()}\`\n`,
-      `Fast Track Voting Period: \`${web3.consts.democracy.fastTrackVotingPeriod.toNumber()}\`\n`,
-      `Cool Off Period: \`${web3.consts.democracy.cooloffPeriod.toNumber()}\`\n`,
-      `Preimage Byte Deposit: \`${web3.consts.democracy.preimageByteDeposit.toNumber()}\`\n`,
-      `Max Votes: \`${web3.consts.democracy.maxVotes.toNumber()}\``,
+      `Enactment Period: \`${web3.consts.democracy.enactmentPeriod.toHuman()}\`\n`,
+      `Launch Period: \`${web3.consts.democracy.launchPeriod.toHuman()}\`\n`,
+      `Voting Period: \`${web3.consts.democracy.votingPeriod.toHuman()}\`\n`,
+      `Minimum Deposit: \`${web3.consts.democracy.minimumDeposit.toHuman()}\`\n`,
+      `Fast Track Voting Period: \`${web3.consts.democracy.fastTrackVotingPeriod.toHuman()}\`\n`,
+      `Cool Off Period: \`${web3.consts.democracy.cooloffPeriod.toHuman()}\`\n`,
+      `Preimage Byte Deposit: \`${web3.consts.democracy.preimageByteDeposit.toHuman()}\`\n`,
+      `Max Votes: \`${web3.consts.democracy.maxVotes.toHuman()}\``,
     );
 
     replyWithMarkdown(msg, inReplyTo(message.message_id));

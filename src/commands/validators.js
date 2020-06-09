@@ -51,7 +51,7 @@ module.exports = () => {
   
         msg = msg.concat(
           `${i}] *${stakingValidator[i].accountId}*\n`,
-          `Balance: \`${balance.data.free.toHuman()}\`\n`,
+          `Staked: \`${balance.data.free.toHuman()}\`\n`,
           `Commission: \`${prefs.commission.toHuman()}\`\n`,
           `Online: \`${stakingValidator[i].online.isOnline}\`\n\n`,
         );

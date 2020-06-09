@@ -10,10 +10,17 @@ module.exports = () => {
     const network = args[0] ? args[0].toLowerCase() : 'polkadot';
     const web3 = getWeb3(network);
 
+    const [validatorCount, minValidatorCount] = await Promise.all([
+      web3.query.staking.validatorCount(),
+      web3.query.staking.minimumValidatorCount(),
+    ]);
+
     let msg = '';
     msg = msg.concat(
-      `Sessions Per Era: \`${web3.consts.staking.sessionsPerEra.toNumber()}\`\n`,
-      `Bonding Duration: \`${web3.consts.staking.bondingDuration.toNumber()} days\``,
+      `Sessions Per Era: \`${web3.consts.staking.sessionsPerEra.toHuman()}\`\n`,
+      `Bonding Duration: \`${web3.consts.staking.bondingDuration.toHuman()} days\``,
+      `Validator Count: \`${validatorCount.toHuman()}\``,
+      `Minimum Validator Count: \`${minValidatorCount.toHuman()}\``,
     );
 
     replyWithMarkdown(msg, inReplyTo(message.message_id));

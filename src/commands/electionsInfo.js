@@ -12,11 +12,11 @@ module.exports = () => {
 
     let msg = '';
     msg = msg.concat(
-      `Candidacy Bond: \`${web3.consts.electionsPhragmen.candidacyBond.toNumber()}\`\n`,
-      `Voting Bond: \`${web3.consts.electionsPhragmen.votingBond.toNumber()}\`\n`,
-      `Desired Members: \`${web3.consts.electionsPhragmen.desiredMembers.toNumber()}\`\n`,
-      `Desired Runners Up: \`${web3.consts.electionsPhragmen.desiredRunnersUp.toNumber()}\`\n`,
-      `Term Duration: \`${web3.consts.electionsPhragmen.termDuration.toNumber()}\``,
+      `Candidacy Bond: \`${web3.consts.electionsPhragmen.candidacyBond.toHuman()}\`\n`,
+      `Voting Bond: \`${web3.consts.electionsPhragmen.votingBond.toHuman()}\`\n`,
+      `Desired Members: \`${web3.consts.electionsPhragmen.desiredMembers.toHuman()}\`\n`,
+      `Desired Runners Up: \`${web3.consts.electionsPhragmen.desiredRunnersUp.toHuman()}\`\n`,
+      `Term Duration: \`${web3.consts.electionsPhragmen.termDuration.toHuman()}\``,
     );
 
     replyWithMarkdown(msg, inReplyTo(message.message_id));

@@ -42,7 +42,7 @@ module.exports = () => {
 
         msg = msg.concat(
           `${i}] *${intentionStaking[i].accountId}*\n`,
-          `Balance: \`${balance.data.free.toHuman()}\`\n`,
+          `Staked: \`${balance.data.free.toHuman()}\`\n`,
           `Commission: \`${intentionStaking[i].validatorPrefs.commission.toHuman()}\`\n`,
           `Nominations: \`${intentionStaking[i].nominators.lengths}\`\n\n`,
         );

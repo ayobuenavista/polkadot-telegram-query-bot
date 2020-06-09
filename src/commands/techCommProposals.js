@@ -10,12 +10,18 @@ module.exports = () => {
     const network = args[0] ? args[0].toLowerCase() : 'polkadot';
     const web3 = getWeb3(network);
 
+    const [proposals] = await Promise.all([
+      web3.query.technicalCommittee.proposals(),
+    ]);
+
+    if (proposals.length === 0) {
+      replyWithMarkdown('No technical committee proposals returned', inReplyTo(message.message_id));
+    }
+
     let msg = '';
-    msg = msg.concat(
-      `Epoch Duration: \`${web3.consts.babe.epochDuration.toHuman()}\`\n`,
-      `Expected Block Time: \`${web3.consts.babe.expectedBlockTime.toHuman()}\`\n`,
-      `Extrinsic Fee Per Byte: \`${web3.consts.transactionPayment.transactionByteFee.toHuman()}\``,
-    );
+    for (let i = 0; i < proposals.length; i++) {
+      msg = msg.concat(`${i}] \`${proposals[i]}\`\n`);
+    }
 
     replyWithMarkdown(msg, inReplyTo(message.message_id));
   };

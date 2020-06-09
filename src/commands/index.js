@@ -1,18 +1,26 @@
 const logger = require('../logger');
 const balance = require('./balance');
 const chainInfo = require('./chainInfo');
+const councilInfo = require('./councilInfo');
 const democracyInfo = require('./democracyInfo');
 const electionsInfo = require('./electionsInfo');
 const intentions = require('./intentions');
 const latestBlock = require('./latestBlock');
+const proposals = require('./proposals');
+const proposalInfo = require('./proposalInfo');
 const runtimeConstants = require('./runtimeConstants');
 const stakingInfo = require('./stakingInfo');
+const techComm = require('./techComm');
+const techCommProposals = require('./techCommProposals');
+const techCommProposalInfo = require('./techCommProposalInfo');
 const validators = require('./validators');
 
 module.exports = async app => {
   app.command('balance', balance());
   app.command('chaininfo', chainInfo());
   app.command('chainInfo', chainInfo());
+  app.command('councilinfo', councilInfo());
+  app.command('councilInfo', councilInfo());
   app.command('democracyInfo', democracyInfo());
   app.command('democracyinfo', democracyInfo());
   app.command('electionsInfo', electionsInfo());
@@ -20,11 +28,20 @@ module.exports = async app => {
   app.command('intentions', intentions());
   app.command('latestBlock', latestBlock());
   app.command('latestblock', latestBlock());
+  app.command('proposals', proposals());
+  app.command('proposalinfo', proposalInfo());
+  app.command('proposalInfo', proposalInfo());
   app.command('runtimeconstants', runtimeConstants());
   app.command('runtimeconstants', runtimeConstants());
   app.command('runtimeConstants', runtimeConstants());
   app.command('stakinginfo', stakingInfo());
   app.command('stakingInfo', stakingInfo());
+  app.command('techcomm', techComm());
+  app.command('techComm', techComm());
+  app.command('techcommproposals', techCommProposals());
+  app.command('techCommProposals', techCommProposals());
+  app.command('techcommproposalInfo', techCommProposalInfo());
+  app.command('techCommProposalInfo', techCommProposalInfo());
   app.command('validators', validators());
 
   logger.info('Initialized commands');
