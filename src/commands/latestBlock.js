@@ -16,6 +16,9 @@ module.exports = () => {
     msg = msg.concat(
       `Latest Block #: \`${lastHeader.number}\`\n`,
       `Hash: \`${lastHeader.hash}\`\n`,
+      `Parent Hash: \`${lastHeader.parentHash}\`\n`,
+      `Extrinsics Root: \`${lastHeader.extrinsicsRoot}\`\n`,
+      `State Root: \`${lastHeader.stateRoot}\`\n`,
       `Author: \`${header.author}\``,
     );
 

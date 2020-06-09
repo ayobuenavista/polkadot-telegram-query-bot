@@ -15,7 +15,6 @@ module.exports = () => {
       web3.query.balances.totalIssuance(),
       web3.derive.session.info()
     ]);
-    console.log(parseInt(JSON.stringify(session.activeEraStart)));
 
     let msg = '';
     msg = msg.concat(

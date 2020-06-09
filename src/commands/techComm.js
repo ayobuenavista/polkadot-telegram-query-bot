@@ -10,8 +10,6 @@ module.exports = () => {
     const chain = args[0] ? args[0].toLowerCase() : 'polkadot';
     const web3 = getWeb3(chain);
 
-    console.log(web3.query);
-
     const [members, prime, proposalCount] = await Promise.all([
       web3.query.technicalCommittee.members(),
       web3.query.technicalCommittee.prime(),

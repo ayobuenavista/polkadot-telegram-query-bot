@@ -16,8 +16,6 @@ module.exports = () => {
       web3.query.council.proposalCount(),
     ]);
 
-    console.log(`F${prime}F`);
-
     let msg = '';
     msg = msg.concat(
       `Prime: \`${(prime == '') ? 'None' : prime }\`\n`,
