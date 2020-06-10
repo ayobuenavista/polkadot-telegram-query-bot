@@ -36,7 +36,6 @@ module.exports = async app => {
   app.command('proposalinfo', proposalInfo());
   app.command('proposalInfo', proposalInfo());
   app.command('runtimeconstants', runtimeConstants());
-  app.command('runtimeconstants', runtimeConstants());
   app.command('runtimeConstants', runtimeConstants());
   app.command('stakinginfo', stakingInfo());
   app.command('stakingInfo', stakingInfo());

@@ -40,11 +40,13 @@ module.exports = () => {
       for (let i = start; i <= end; i++) {
         balance = await web3.query.system.account(intentionStaking[i].accountId);
 
+        console.log(intentionStaking[i]);
+
         msg = msg.concat(
           `${i}] *${intentionStaking[i].accountId}*\n`,
           `Staked: \`${balance.data.free.toHuman()}\`\n`,
           `Commission: \`${intentionStaking[i].validatorPrefs.commission.toHuman()}\`\n`,
-          `Nominations: \`${intentionStaking[i].nominators.lengths}\`\n\n`,
+          `Nominations: \`${intentionStaking[i].nominators.length}\`\n\n`,
         );
       }
 
