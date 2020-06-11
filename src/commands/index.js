@@ -5,6 +5,7 @@ const chainInfo = require('./chainInfo');
 const councilInfo = require('./councilInfo');
 const democracyInfo = require('./democracyInfo');
 const electionsInfo = require('./electionsInfo');
+const intentionCount = require('./intentionCount');
 const intentions = require('./intentions');
 const latestBlock = require('./latestBlock');
 const proposals = require('./proposals');
@@ -15,23 +16,26 @@ const sudoKey = require('./sudoKey');
 const techComm = require('./techComm');
 const techCommProposals = require('./techCommProposals');
 const techCommProposalInfo = require('./techCommProposalInfo');
+const validatorCount = require('./validatorCount');
 const validators = require('./validators');
 
 module.exports = async app => {
   app.command('balance', balance());
-  app.command('blockInfo', blockInfo());
+  app.command('blockinfo', blockInfo());
   app.command('blockInfo', blockInfo());
   app.command('chaininfo', chainInfo());
   app.command('chainInfo', chainInfo());
   app.command('councilinfo', councilInfo());
   app.command('councilInfo', councilInfo());
-  app.command('democracyInfo', democracyInfo());
   app.command('democracyinfo', democracyInfo());
-  app.command('electionsInfo', electionsInfo());
+  app.command('democracyInfo', democracyInfo());
   app.command('electionsinfo', electionsInfo());
+  app.command('electionsInfo', electionsInfo());
+  app.command('intentioncount', intentionCount());
+  app.command('intentionCount', intentionCount());
   app.command('intentions', intentions());
-  app.command('latestBlock', latestBlock());
   app.command('latestblock', latestBlock());
+  app.command('latestBlock', latestBlock());
   app.command('proposals', proposals());
   app.command('proposalinfo', proposalInfo());
   app.command('proposalInfo', proposalInfo());
@@ -47,6 +51,8 @@ module.exports = async app => {
   app.command('techCommProposals', techCommProposals());
   app.command('techcommproposalInfo', techCommProposalInfo());
   app.command('techCommProposalInfo', techCommProposalInfo());
+  app.command('validatorcount', validatorCount());
+  app.command('validatorCount', validatorCount());
   app.command('validators', validators());
 
   logger.info('Initialized commands');

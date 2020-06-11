@@ -31,7 +31,7 @@ module.exports = () => {
       `Era Length: \`${session.eraLength.toHuman()}\`\n`,
       `Session Length: \`${session.sessionLength.toHuman()}\`\n`,
       `Session Per Era: \`${session.sessionsPerEra.toHuman()}\`\n`,
-      `Validator Count: \`${session.validatorCount.toHuman()}\`\n`,
+      `Validator Slot Count: \`${session.validatorCount.toHuman()}\`\n`,
     );
 
     replyWithMarkdown(msg, inReplyTo(message.message_id));

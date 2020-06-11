@@ -32,15 +32,18 @@ module.exports = () => {
       );
 
       if (end > intentionStaking.length) {
-        end = intentionStaking.length;
+        end = intentionStaking.length - 1;
       }
 
       let balance;
       let msg = '';
+
+      msg = msg.concat(
+        `Waiting Validator Count: \`${intentionStaking.length}\`\n`,
+        `Displaying waiting validators ${start} to ${end}\n\n`,
+      );
       for (let i = start; i <= end; i++) {
         balance = await web3.query.system.account(intentionStaking[i].accountId);
-
-        console.log(intentionStaking[i]);
 
         msg = msg.concat(
           `${i}] *${intentionStaking[i].accountId}*\n`,

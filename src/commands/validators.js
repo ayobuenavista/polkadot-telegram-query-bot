@@ -37,12 +37,17 @@ module.exports = () => {
       });
 
       if (end > stakingValidator.length) {
-        end = stakingValidator.length;
+        end = stakingValidator.length - 1;
       }
   
       let balance;
       let prefs;
       let msg = '';
+
+      msg = msg.concat(
+        `Active Validator Count: \`${stakingValidator.length}\`\n`,
+        `Displaying validators ${start} to ${end}\n\n`,
+      );
       for (let i = start; i <= end; i++) {
         [balance, prefs] = await Promise.all([
           web3.query.system.account(stakingValidator[i].accountId),

@@ -78,57 +78,67 @@ You can send these commands to query information from a Subtrate chain:
 /electionsInfo <optional: chain>
 ```
 
-8. **Returns a range of validators that indicate their intention to validate (e.g. range: 0-10)**
+8. **Returns the number of validators waiting to validate**
+```
+/intentionCount <optional: chain>
+```
+
+9. **Returns a range of validators that indicate their intention to validate (e.g. range: 0-10)**
 ```
 /intentions <range> <optional: chain>
 ```
 
-9. **Returns the latest block information**
+10. **Returns the latest block information**
 ```
 /latestBlock <optional: chain>
 ```
 
-10. **Returns the information of a proposal by providing the proposal hash**
+11. **Returns the information of a proposal by providing the proposal hash**
 ```
 /proposalInfo <hash> <optional: chain>
 ```
 
-11. **Returns the list of proposals**
+12. **Returns the list of proposals**
 ```
 /proposals <optional: chain>
 ```
 
-12. **Returns the runtime constant values**
+13. **Returns the runtime constant values**
 ```
 /runtimeConstants <optional: chain>
 ```
 
-13. **Returns the staking information**
+14. **Returns the staking information**
 ```
 /stakingInfo <optional: chain>
 ```
 
-14. **Returns the sudo key accountId**
+15. **Returns the sudo key accountId**
 ```
 /sudoKey <optional: chain>
 ```
 
-15. **Returns the technical committee information**
+16. **Returns the technical committee information**
 ```
 /techComm <optional: chain>
 ```
 
-16. **Returns the information of a technical committee proposal by providing the proposal hash**
+17. **Returns the information of a technical committee proposal by providing the proposal hash**
 ```
 /techCommProposalInfo <hash> <optional: chain>
 ```
 
-17. **Returns the list of technical committee proposals**
+18. **Returns the list of technical committee proposals**
 ```
 /techCommProposals <optional: chain>
 ```
 
-18. **Returns a range of active validators (e.g. range: 0-10)**
+19. **Returns the number of active validators**
+```
+/validatorCount <optional: chain>
+```
+
+20. **Returns a range of active validators (e.g. range: 0-10)**
 ```
 /validators <range> <optional: chain>
 ```

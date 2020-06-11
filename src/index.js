@@ -36,6 +36,8 @@ async function main() {
     '/electionsInfo <optional: chain>\n\n',
     '`Returns elections information`\n',
     '/electionsInfo <optional: chain>\n\n',
+    '`Returns the number of validators waiting to validate`\n',
+    '/intentionCount <optional: chain>\n\n',
     '`Returns a range of validators that indicate their intention to validate (e.g. range: 0-10)`\n',
     '/intentions <range> <optional: chain>\n\n',
     '`Returns the latest block information`\n',
@@ -56,6 +58,8 @@ async function main() {
     '/techCommProposalInfo <hash> <optional: chain>\n\n',
     '`Returns the list of technical committee proposals`\n',
     '/techCommProposals <optional: chain>\n\n',
+    '`Returns the number of active validators`\n',
+    '/validatorCount <optional: chain>\n\n',
     '`Returns a range of active validators (e.g. range: 0-10)`\n',
     '/validators <range> <optional: chain>\n\n',
   );
