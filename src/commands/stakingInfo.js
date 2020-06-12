@@ -18,8 +18,8 @@ module.exports = () => {
     let msg = '';
     msg = msg.concat(
       `Sessions Per Era: \`${web3.consts.staking.sessionsPerEra.toHuman()}\`\n`,
-      `Bonding Duration: \`${web3.consts.staking.bondingDuration.toHuman()} days\``,
-      `Validator Count: \`${validatorCount.toHuman()}\``,
+      `Bonding Duration: \`${web3.consts.staking.bondingDuration.toHuman()} days\`\n`,
+      `Validator Count: \`${validatorCount.toHuman()}\`\n`,
       `Minimum Validator Count: \`${minValidatorCount.toHuman()}\``,
     );
 
