@@ -43,102 +43,97 @@ Note: For chain support, only Polkadot and Kusama suported for now, with Polkado
 
 You can send these commands to query information from a Subtrate chain:
 
-1. **Returns the balance of an account**
+**Returns the balance of an account**
 ```
 /balance <accountId> <optional: chain>
 ```
 
-2. **Returns the block info at the provided height**
+**Returns the block info at the provided height**
 ```
 /blockInfo <height> <optional: chain>
 ```
 
-3. **Returns basic information of the Substrate chain**
+**Returns basic information of the Substrate chain**
 ```
 /chainInfo <optional: chain>
 ```
 
-4. **Returns council information**
+**Returns council information**
 ```
 /councilInfo <optional: chain>
 ```
 
-5. **Returns democracy information**
+**Returns democracy information**
 ```
 /democracyInfo <optional: chain>
 ```
 
-6. **Returns elections information**
+**Returns elections information**
 ```
 /electionsInfo <optional: chain>
 ```
 
-7. **Returns elections information**
-```
-/electionsInfo <optional: chain>
-```
-
-8. **Returns the number of validators waiting to validate**
+**Returns the number of validators waiting to validate**
 ```
 /intentionCount <optional: chain>
 ```
 
-9. **Returns a range of validators that indicate their intention to validate (e.g. range: 0-10)**
+**Returns a range of validators that indicate their intention to validate (e.g. range: 0-10)**
 ```
 /intentions <range> <optional: chain>
 ```
 
-10. **Returns the latest block information**
+**Returns the latest block information**
 ```
 /latestBlock <optional: chain>
 ```
 
-11. **Returns the information of a proposal by providing the proposal hash**
+**Returns the information of a proposal by providing the proposal hash**
 ```
 /proposalInfo <hash> <optional: chain>
 ```
 
-12. **Returns the list of proposals**
+**Returns the list of proposals**
 ```
 /proposals <optional: chain>
 ```
 
-13. **Returns the runtime constant values**
+**Returns the runtime constant values**
 ```
 /runtimeConstants <optional: chain>
 ```
 
-14. **Returns the staking information**
+**Returns the staking information**
 ```
 /stakingInfo <optional: chain>
 ```
 
-15. **Returns the sudo key accountId**
+**Returns the sudo key accountId**
 ```
 /sudoKey <optional: chain>
 ```
 
-16. **Returns the technical committee information**
+**Returns the technical committee information**
 ```
 /techComm <optional: chain>
 ```
 
-17. **Returns the information of a technical committee proposal by providing the proposal hash**
+**Returns the information of a technical committee proposal by providing the proposal hash**
 ```
 /techCommProposalInfo <hash> <optional: chain>
 ```
 
-18. **Returns the list of technical committee proposals**
+**Returns the list of technical committee proposals**
 ```
 /techCommProposals <optional: chain>
 ```
 
-19. **Returns the number of active validators**
+**Returns the number of active validators**
 ```
 /validatorCount <optional: chain>
 ```
 
-20. **Returns a range of active validators (e.g. range: 0-10)**
+**Returns a range of active validators (e.g. range: 0-10)**
 ```
 /validators <range> <optional: chain>
 ```
