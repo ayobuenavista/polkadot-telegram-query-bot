@@ -1,7 +1,7 @@
 const Extra = require('telegraf/extra');
 
 module.exports = () => {
-  return async ctx => {
+  return async (ctx) => {
     const { helpers, message, reply, replyWithMarkdown, state } = ctx;
     const { inReplyTo } = Extra;
     const { checkAddress, getWeb3 } = helpers;
@@ -20,19 +20,21 @@ module.exports = () => {
     const [valid, error] = checkAddress(address, chain);
 
     if (!valid) {
-      reply(
-        `ERROR: ${error}`
-      );
+      reply(`ERROR: ${error}`);
       return;
     }
 
     const { data: balance } = await web3.query.system.account(address);
 
+    const total =
+      chain === 'polkadot' ? balance.free / 10 ** 10 : balance.free.toHuman();
+    const bonded =
+      chain === 'polkadot'
+        ? balance.miscFrozen / 10 ** 10
+        : balance.miscFrozen.toHuman();
+
     let msg = '';
-    msg = msg.concat(
-      `Total: \`${balance.free.toHuman()}\`\n`,
-      `Bonded: \`${balance.miscFrozen.toHuman()}\``,
-    );
+    msg = msg.concat(`Total: \`${total}\`\n`, `Bonded: \`${bonded}\``);
 
     replyWithMarkdown(msg, inReplyTo(message.message_id));
   };
