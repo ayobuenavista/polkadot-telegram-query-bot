@@ -1,8 +1,12 @@
+const logger = require('../logger');
+
 module.exports = () => {
   return (ctx, next) => {
     if (ctx.updateType === 'message' && ctx.updateSubTypes.includes('text')) {
       let text = ctx.update.message.text;
       let match;
+
+      logger.info(`${ctx.message.from.username}: ${text}`);
 
       if (text.startsWith('/')) {
         text = text.replace(/^\s+|\s+$|\s+(?=\s)/g, '');
